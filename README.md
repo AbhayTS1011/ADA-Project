@@ -17,6 +17,7 @@ Each notebook is self-contained and documents its dataset format, data loading, 
 
 ## Detector overview
 The detection framework uses threshold-based scoring and cross-scenario comparisons to distinguish genuine leakage signals from normal model performance variation.
+
 The detector receives processed training and test splits, labels, feature names, optional timestamps and row IDs, and a black-box model interface (`predict` / `predict_proba`). It evaluates signals such as:
 
 - **Target leakage:** features that strongly encode the target.
