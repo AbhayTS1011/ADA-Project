@@ -16,7 +16,7 @@ The notebooks inject controlled leakage into benchmark datasets, run a black-box
 Each notebook is self-contained and documents its dataset format, data loading, configuration, benchmark scenarios, outputs, and caveats. They are designed for Google Colab, with data uploaded to `/content` where required. Follow the instructions at the top of the notebook you want to run; set its quick mode option for a shorter run. Full benchmark runs can take substantial time, especially for the larger datasets.
 
 ## Detector overview
-
+The detection framework uses threshold-based scoring and cross-scenario comparisons to distinguish genuine leakage signals from normal model performance variation.
 The detector receives processed training and test splits, labels, feature names, optional timestamps and row IDs, and a black-box model interface (`predict` / `predict_proba`). It evaluates signals such as:
 
 - **Target leakage:** features that strongly encode the target.
